@@ -17,7 +17,7 @@ Incluye integración con base de datos en memoria **H2**, autenticación básica
 
 ---
 
-## ⚙️ Configuración
+## Configuración
 
 El proyecto utiliza una base de datos **H2 en memoria**.  
 Las configuraciones principales se encuentran en `src/main/resources/application.properties`:
@@ -68,10 +68,26 @@ Se definen dos usuarios por defecto:
     - username: `admin`
     - password: `admin123`
 
-### 🔑 Permisos de los endpoints
+### Permisos de los endpoints
 
 - `GET /lists` → Público (no requiere autenticación).
 - `GET /lists/**` → Público (no requiere autenticación).
 - `POST /lists` → Requiere rol **ADMIN**.
 - `DELETE /lists/**` → Requiere rol **ADMIN**.
 - Cualquier otro endpoint requiere autenticación básica (**Basic Auth**).
+- 
+## Probar con Postman
+
+Para facilitar las pruebas de los endpoints, se incluye una colección de **Postman** exportada en el archivo:
+*postman/Playlists_API.postman_collection.json*
+
+### Importar la colección
+
+1. Abre **Postman**.
+2. Haz clic en el botón **Import** (arriba a la izquierda).
+3. Selecciona el archivo `Playlists-Microservice.postman_collection.json` desde la carpeta `postman` del proyecto.
+4. Una vez importada, verás la colección **Playlists Microservice** con todos los endpoints listos para probar.
+
+⚠️ **Nota:**
+- Algunos endpoints requieren autenticación **Basic Auth** con los usuarios configurados en la sección [Seguridad](#seguridad).
+- La URL base utilizada es:  http://localhost:8080

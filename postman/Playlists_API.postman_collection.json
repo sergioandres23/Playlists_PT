@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "31827221-f9e2-4133-8c09-a61b6a729508",
+		"name": "Playlists_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22770697"
+	},
+	"item": [
+		{
+			"name": "All-playlists",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/lists",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "One-playlist",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/lists",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-playlist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Lista 1\",\r\n  \"description\": \"Lista de canciones de Spotify\",\r\n  \"songs\": [\r\n    {\r\n      \"title\": \"One\",\r\n      \"artist\": \"Metallica\",\r\n      \"album\": \"And Justice for All\",\r\n      \"year\": 1988,\r\n      \"genre\": \"Metal\"\r\n    },\r\n    {\r\n      \"title\": \"Yellow\",\r\n      \"artist\": \"Coldplay\",\r\n      \"album\": \"Parachutes\",\r\n      \"year\": 2000,\r\n      \"genre\": \"Pop Rock\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/lists",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete-playlist",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Lista 1\",\r\n  \"description\": \"Lista de canciones de Spotify\",\r\n  \"songs\": [\r\n    {\r\n      \"title\": \"One\",\r\n      \"artist\": \"Metallica\",\r\n      \"album\": \"And Justice for All\",\r\n      \"year\": 1988,\r\n      \"genre\": \"Metal\"\r\n    },\r\n    {\r\n      \"title\": \"Yellow\",\r\n      \"artist\": \"Coldplay\",\r\n      \"album\": \"Parachutes\",\r\n      \"year\": 2000,\r\n      \"genre\": \"Pop Rock\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/lists/Lista1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lists",
+						"Lista1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
